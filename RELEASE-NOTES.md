@@ -1,7 +1,25 @@
-# WhisperDrop — First Public Preview
+# WhisperDrop v1.0.0
 
-Version 1.0 (build 1). This preview targets Apple Silicon and macOS 14 or later; operation on macOS 14 has not been tested. A standalone candidate passed a transcription test in a macOS Guest account; the precise macOS version and model used in that test were not recorded here.
+WhisperDrop transcribes supported audio and video locally on Apple Silicon Macs using whisper.cpp and FFmpeg. Download or import a supported GGML model in the app; transcription can run offline after model installation.
 
-WhisperDrop transcribes locally with whisper.cpp once a model is installed. Models can be downloaded in the app, and exports are available in TXT, SRT, VTT and JSON. The standalone candidate bundles FFmpeg and does not require Python, Homebrew or Xcode for normal use. Supported formats are limited by the bundled FFmpeg configuration. Accuracy and speed depend on the model and input. Automatic updates are disabled.
+## Features
 
-The frozen candidate is ad-hoc signed and is not notarized. Its distribution is blocked pending completion of the third-party licensing review; no binary should be attached until that review passes. Its SHA-256 is `49013f17e7be6db33b69a3a895cbd596e5e25f4935b2aef4e4bb64da2b03f6e6`. Corresponding FFmpeg source availability, replacement/relinking requirements and complete notices for all bundled dependencies remain to be verified.
+- Local audio and video transcription.
+- Model download or import, with downloaded models checked against pinned SHA-256 digests.
+- TXT, SRT, VTT, and JSON exports.
+- Translation when supported by the selected model.
+
+## Requirements and test status
+
+- Apple Silicon Mac (arm64).
+- macOS 14.0 or later is the app's declared minimum. macOS 14 has not been tested.
+- The standalone app was tested on Apple Silicon running macOS 27.2.1. It launched on the administrator account after Gatekeeper authorization with Touch ID.
+- A supported model is required and is downloaded separately. Model download needs internet access; transcription can run offline after model installation.
+
+## Security and third-party software
+
+The app is ad hoc signed, has no Developer ID signature, and is not notarized. macOS may require explicit approval at first launch. Use the macOS approval flow if you trust the release; do not disable Gatekeeper globally or remove quarantine attributes as the default installation procedure.
+
+The release includes a separate FFmpeg 9.0.2 source ZIP with its recorded configuration, LGPL text, and library replacement instructions. The build configuration disables FFmpeg GPL and nonfree components. The detached upstream source signature has not been independently verified with an authenticated key. The complete license inventory for compiled code, exact source-to-binary provenance, and Sparkle component inventory remain unresolved; the source ZIP alone does not establish complete compliance.
+
+Download the [v1.0.0 release](https://github.com/uddipta0072/WhisperDrop/releases/tag/v1.0.0).
