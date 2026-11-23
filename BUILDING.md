@@ -3,7 +3,7 @@
 The source project was inspected with Xcode 27.2 and has a macOS 14 deployment target. Its scheme is `MyApp`. On an Apple Silicon Mac with a compatible Xcode installation, the SwiftUI target can be built with:
 
 ```sh
-xcodebuild -project 'Untitled Project.xcodeproj' -scheme MyApp \
+xcodebuild -project 'Whisperdrop.xcodeproj' -scheme MyApp \
   -configuration Release -derivedDataPath build/DerivedData \
   ARCHS=arm64 MACOSX_DEPLOYMENT_TARGET=14.0 CODE_SIGNING_ALLOWED=NO build
 ```
