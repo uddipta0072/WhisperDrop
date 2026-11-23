@@ -8,4 +8,6 @@ The candidate reported the following configure options. The original build used 
 --disable-everything --disable-autodetect --disable-doc --disable-ffplay --disable-ffprobe --disable-gpl --disable-nonfree --enable-shared --disable-static --enable-ffmpeg --enable-protocol='file,pipe' --enable-demuxer='mov,matroska,mp3,wav,flac,ogg,aac,mpegts,mpeg,avi' --enable-decoder='aac,aac_fixed,mp3,mp3float,pcm_s16le,pcm_s24le,pcm_s32le,pcm_f32le,flac,opus,vorbis,alac,ac3,eac3' --enable-encoder=pcm_s16le --enable-muxer=wav --enable-filter='aresample,anull' --extra-cflags='-mmacosx-version-min=14.0' --extra-ldflags='-mmacosx-version-min=14.0'
 ```
 
+The frozen ZIP does not contain the source archive, despite the notice inside the app saying that it is in the release folder. The archive has not been published alongside the ZIP. Any release notice must identify the actual accompanying source asset and its location; do not represent it as already available.
+
 The binary distribution review is incomplete, including corresponding-source availability and library replacement/relinking. See [FFmpeg's license guidance](https://ffmpeg.org/legal.html) and the included [LGPL text](licenses/FFmpeg-LGPL-2.1.txt).
